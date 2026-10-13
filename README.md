@@ -1,6 +1,6 @@
 # pdfstitch
 
-A macOS command-line tool that merges pairs of half-page scanned PDFs into full pages.
+A macOS command-line tool that merges pairs of half-page scanned PDFs into full pages **without any quality loss**.
 
 ## Background
 
@@ -52,7 +52,7 @@ Each source page is rendered using `PDFPage.draw(with:to:)` with a clip rect res
 - **Page A** (even index): clipped to `y:[H/2 .. H]` → upper half
 - **Page B** (odd index): translated by `−H/2`, clipped to `y:[0 .. H/2]` → lower half
 
-This is a lossless vector operation — the original PDF content streams are not rasterized or re-encoded.
+This is a lossless vector operation — the original PDF content streams are not rasterized or re-encoded. The embedded scan images are copied directly without any decode/re-encode cycle, preserving the original quality exactly.
 
 ## Requirements
 
