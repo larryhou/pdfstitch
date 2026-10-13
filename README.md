@@ -68,7 +68,7 @@ swiftc main.swift -o pdfstitch
 To install globally:
 
 ```bash
-sudo cp pdfstitch /usr/local/bin/
+cp pdfstitch /usr/local/bin/
 ```
 
 ## Usage
